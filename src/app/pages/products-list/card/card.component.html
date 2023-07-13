@@ -4,9 +4,7 @@
         <mat-card-subtitle>{{ product.subCategory }}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image alt="{{ product.images[0].source }}" [src]="product.images[0].url" />
-    <mat-card-content>
-        {{ product.price }}
-    </mat-card-content>
+    <mat-card-content>Цена: {{ product.price }}</mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="onClick($event)">Купить</button>
     </mat-card-actions>
