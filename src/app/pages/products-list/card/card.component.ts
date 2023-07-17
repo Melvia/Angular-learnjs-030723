@@ -9,8 +9,6 @@ import {productMock} from '../../../shared/products/product.mock';
 export class CardComponent {
     product = productMock;
 
-    protected readonly onclick = onclick;
-
     onClick(event: Event): void {
         event.stopPropagation();
     }
