@@ -1,5 +1,30 @@
-<app-card class="card" (click)="onCardClick()"></app-card>
-<app-card class="card" (click)="onCardClick()"></app-card>
-<app-card class="card" (click)="onCardClick()"></app-card>
-<app-card class="card" (click)="onCardClick()"></app-card>
-<app-card class="card" (click)="onCardClick()"></app-card>
+<app-card
+    class="card"
+    [product]="productList[0]"
+    (click)="onCardClick()"
+    (buyButtonClick)="onCardBuyButtonClick(productList[0])"
+></app-card>
+<app-card
+    class="card"
+    [product]="productList[1]"
+    (click)="onCardClick()"
+    (buyButtonClick)="onCardBuyButtonClick(productList[1])"
+></app-card>
+<app-card
+    class="card"
+    [product]="productList[2]"
+    (click)="onCardClick()"
+    (buyButtonClick)="onCardBuyButtonClick(productList[2])"
+></app-card>
+<app-card
+    class="card"
+    [product]="productList[3]"
+    (click)="onCardClick()"
+    (buyButtonClick)="onCardBuyButtonClick(productList[3])"
+></app-card>
+<app-card
+    class="card"
+    [product]="productList[4]"
+    (click)="onCardClick()"
+    (buyButtonClick)="onCardBuyButtonClick(productList[4])"
+></app-card>
