@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {productsMock} from '../../shared/products/products.mock';
 import {IProduct} from '../../shared/products/product.interface';
+import {LoadDirection} from '../../shared/directions';
 
 @Component({
     selector: 'app-products-list',
@@ -26,5 +27,13 @@ export class ProductsListComponent implements OnInit {
         console.log('Get products');
 
         return this.products;
+    }
+
+    // @ts-ignore
+    onLoad(direction: LoadDirection) {
+        if (direction === LoadDirection.down) {
+            // eslint-disable-next-line no-console
+            console.log('loading date', LoadDirection.down);
+        }
     }
 }
