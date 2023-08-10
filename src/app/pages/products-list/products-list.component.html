@@ -4,7 +4,7 @@
     class="scroll-container"
 >
     <!-- Раскомментрировать для ДЗ -->
-    <!-- <ng-container
+    <ng-container
         *appPagination="
             let productsGroup of products;
             chankSize: 4;
@@ -14,47 +14,46 @@
             let back = back;
             let selectIndex = selectIndex
         "
-    > -->
-    <div class="cards">
-        <app-card
-            *ngFor="let product of productsFromInput; trackBy: trackById"
-            class="card"
-            [product]="product"
-            (buy)="onProductBuy($event)"
-        ></app-card>
-    </div>
-    <div class="pagination">
-        <!-- Add pagination control -->
-    </div>
-    <!-- </ng-container> -->
+    >
+        <div class="cards">
+            <app-card
+                *ngFor="let product of productsFromInput; trackBy: trackById"
+                class="card"
+                [product]="product"
+                (buy)="onProductBuy($event)"
+            ></app-card>
+        </div>
+        <div class="pagination">
+            <!-- Add pagination control -->
+            <button
+                id="prev-button"
+                title="Previous page"
+                aria-label="Previous page"
+                class="pagination-button"
+            >
+                &lt;
+            </button>
 
-    <!-- <app-card
-        class="card"
-        [product]="productsFromInput[0]"
-        (buy)="onProductBuy($event)"
-    ></app-card>
-    <app-card
-        class="card"
-        [product]="productsFromInput[1]"
-        (buy)="onProductBuy($event)"
-    ></app-card>
-    <app-card
-        class="card"
-        [product]="productsFromInput[2]"
-        (buy)="onProductBuy($event)"
-    ></app-card>
-    <app-card
-        class="card"
-        [product]="productsFromInput[3]"
-        (buy)="onProductBuy($event)"
-    ></app-card>
-    <app-card
-        class="card"
-        [product]="productsFromInput[4]"
-        (buy)="onProductBuy($event)"
-    ></app-card> -->
+            <input type="number" />
+
+            <button
+                id="next-button"
+                title="Next page"
+                aria-label="Next page"
+                class="pagination-button"
+            >
+                &gt;
+            </button>
+        </div>
+    </ng-container>
+
+    <app-card class="card" [product]="productsFromInput[0]" (buy)="onProductBuy($event)"></app-card>
+    <app-card class="card" [product]="productsFromInput[1]" (buy)="onProductBuy($event)"></app-card>
+    <app-card class="card" [product]="productsFromInput[2]" (buy)="onProductBuy($event)"></app-card>
+    <app-card class="card" [product]="productsFromInput[3]" (buy)="onProductBuy($event)"></app-card>
+    <app-card class="card" [product]="productsFromInput[4]" (buy)="onProductBuy($event)"></app-card>
 </div>
-<!-- </ng-template> -->
+<!-- </ng-template>-->
 
 <ng-template #loader>
     <mat-spinner></mat-spinner>
